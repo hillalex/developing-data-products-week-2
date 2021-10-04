@@ -17,7 +17,7 @@ library(geojsonio)
 ```{r map, echo = FALSE}
 beeways <- geojson_read("data/Beeways.geojson", what = "sp")
 leaflet(beeways) %>%
-  addProviderTiles(providers$Wikimedia) %>%
+  addTiles() %>%
   addPolygons(fill = FALSE, weight = 1, color = "green")
 ```
 
